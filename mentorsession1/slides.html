@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Computer Science Mentor Scheme</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.3/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.3/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.3/dist/theme/black.css" id="theme">
+  
+  
+  
+  
+  
+  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Computer Science Mentor Scheme</h1>
+  <p class="subtitle">Session 1: Linux and Git</p>
+</section>
+
+<section id="preface" class="slide level1">
+<h1>Preface</h1>
+<style type="text/css">
+.reveal .slides section {
+    //text-align: left;
+    margin:0 !important;
+}
+
+//p, h1 {
+//  text-align: center;
+//}
+
+.reveal strong {
+ color: #ffe66d;
+}
+
+code {
+    //color: #EB8258;
+    //color: #17B890;
+    background: #121212;
+    padding: 2px;
+    //border-radius: 10px;
+    //box-shadow: 4px 4px 10px #050505;
+}
+
+pre > code {
+    color: #ffffff;
+    padding: 10px !important;
+}
+
+.reveal h1 {
+    font-size: 1.5em;
+</style>
+<p>All materials <strong>available online</strong> at <a href="https://thytom.github.io/session1" class="uri">https://thytom.github.io/session1</a></p>
+<p><em>Link is available in Discord/Teams.</em></p>
+</section>
+<section id="me" class="slide level1">
+<h1>Me</h1>
+<div>
+<ul>
+<li class="fragment">Archie</li>
+<li class="fragment">Senior mentor</li>
+<li class="fragment">Discord co-admin</li>
+<li class="fragment">Wrote the Registration Bot (sorry)</li>
+</ul>
+</div>
+</section>
+<section id="topics" class="slide level1">
+<h1>Topics</h1>
+<ul>
+<li>Configuring <strong>VirtualBox</strong></li>
+<li>Working with <strong>Linux</strong></li>
+<li>Using <strong>Git</strong> for projects</li>
+</ul>
+<p><em>Several <strong>demos</strong> using Linux, feel free to follow along.</em></p>
+</section>
+<section id="show-of-hands" class="slide level1">
+<h1>Show of Hands</h1>
+<p>Who has:</p>
+<div>
+<ul>
+<li class="fragment">Installed <strong>VirtualBox</strong></li>
+<li class="fragment">Installed an <strong>Ubuntu VM</strong></li>
+<li class="fragment">Installed the <strong>Guest Utilities</strong></li>
+</ul>
+</div>
+</section>
+<section id="installing-ubuntu-on-virtualbox" class="slide level1">
+<h1>Installing Ubuntu on VirtualBox</h1>
+<p><a href="https://linuxhint.com/install_ubuntu_virtualbox_2004" class="uri">https://linuxhint.com/install_ubuntu_virtualbox_2004</a></p>
+</section>
+<section id="virtualbox-configuration" class="slide level1">
+<h1>VirtualBox Configuration</h1>
+<p>You can <strong>change settings about your VM</strong>.</p>
+<div class="fragment">
+<p>It is recommended to set:</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Memory <strong>4GB</strong> or more if you can</li>
+<li>Video memory <strong>128MB</strong></li>
+<li><strong>More than one CPU core</strong></li>
+</ul>
+</div>
+</section>
+<section id="demo-fresh-ubuntu-vm" class="slide level1">
+<h1><strong>DEMO</strong>: Fresh Ubuntu VM</h1>
+<p><img data-src="./img/ubuntu.png" height="250" /></p>
+<aside class="notes">
+<p>Configure the virtual machine’s settings.</p>
+</aside>
+</section>
+<section id="some-problems" class="slide level1">
+<h1>Some Problems</h1>
+<ul>
+<li><strong>Mac users</strong> - setting up guest/host copy/paste</li>
+<li>32-bit only</li>
+</ul>
+<p>We have mentors on hand who can help you.</p>
+</section>
+<section id="the-package-manager" class="slide level1">
+<h1>The Package Manager</h1>
+<ul>
+<li>Linux programs are bundled into <strong>packages</strong></li>
+<li><strong>Install and update</strong> via the package manager</li>
+<li>Updates <strong>all your programs</strong>*</li>
+<li>Ubuntu uses <strong>two</strong> package managers, <strong>apt</strong> and <strong>snap</strong></li>
+</ul>
+</section>
+<section id="apt-commands" class="slide level1">
+<h1>Apt Commands</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Update package database</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt update </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform system update</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt upgrade</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install packages</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install [packages...]</span></code></pre></div>
+</section>
+<section id="snap-commands" class="slide level1">
+<h1>Snap Commands</h1>
+<p><em>Snap packages are <strong>automatically updated</strong></em>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install a package</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> snap install spotify</span></code></pre></div>
+</section>
+<section id="virtualbox-guest-additions" class="slide level1">
+<h1>VirtualBox Guest Additions</h1>
+<ul>
+<li>VirtualBox <strong>drivers</strong> to talk to the host</li>
+<li>This allows for:
+<ul>
+<li><strong>better performance</strong></li>
+<li><strong>higher resolutions/fullscreen</strong></li>
+<li><strong>shared copy/paste</strong></li>
+</ul></li>
+</ul>
+<p><em>There are several packages needed to make this work (listed later):</em></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install virtualbox-guest-utils virtualbox-guest-dkms virtualbox-guest-x11</span></code></pre></div>
+</section>
+<section id="text-editor" class="slide level1">
+<h1>Text Editor</h1>
+<ul>
+<li>Ubuntu comes with <strong>GEdit</strong></li>
+<li>There are many others</li>
+<li>We recommend <strong>Visual Studio Code</strong> (<code>vscode</code>)</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> snap install <span class="at">--classic</span> vscode</span></code></pre></div>
+</section>
+<section id="build-essential-valgrind-git" class="slide level1">
+<h1>Build-essential, valgrind, git</h1>
+<p><strong>Build-essential</strong>: Meta-package, pulls in a bunch of useful build tools like <strong>gcc</strong> and <strong>make</strong>.</p>
+<p><strong>Git</strong>: more on this later, you’ve likely already used it.</p>
+<p><strong>Valgrind</strong>: Used later on in PGA for debugging.</p>
+</section>
+<section id="package-list" class="slide level1">
+<h1>Package List</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build tools (used in PGA)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">build-essential</span> git valgrind</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Virtualbox Guest Utils</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualbox-guest-dkms</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualbox-guest-x11</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualbox-guest-utils</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual Studio Code (via snap)</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ex">vscode</span></span></code></pre></div>
+</section>
+<section id="demo-installing-packages" class="slide level1">
+<h1><strong>DEMO</strong>: Installing Packages</h1>
+</section>
+<section id="one" class="slide level1" data-auto-animate="true">
+<h1 data-auto-animate="true">What is Git?</h1>
+<p><img src="./img/git-logo.png" alt=""></p>
+</section>
+<section id="two" class="slide level1" data-auto-animate="true">
+<h1 data-auto-animate="true">What is Git?</h1>
+<div style="display:flex; align-items:center;">
+<img src="./img/git-logo.png" height=200 alt="">
+<ul style="padding-left:40px">
+<li class="fragment">
+Version Control System (<strong>VCS</strong>)
+</li>
+<li class="fragment">
+Every change is recorded
+</li>
+<li class="fragment">
+“Timeline” for your code
+</li>
+</ul>
+</div>
+</section>
+<section id="basics-of-git" class="slide level1">
+<h1>Basics of Git</h1>
+<ul>
+<li>Projects are stored in <strong>repositories</strong></li>
+<li><strong>Repositories</strong> contain all your code</li>
+<li>They also contain the <strong>history</strong> of your code</li>
+</ul>
+</section>
+<section id="basics-of-git-1" class="slide level1">
+<h1>Basics of Git</h1>
+<ul>
+<li>Changes are <strong>committed</strong> to the history</li>
+<li>History is <strong>permanent</strong>*</li>
+<li><strong>Time-travel</strong> - roll back to previous commits</li>
+</ul>
+</section>
+<section id="demo-commits" class="slide level1">
+<h1><strong>DEMO</strong>: Commits</h1>
+<p>Making changes, <strong>committing</strong> them</p>
+<aside class="notes">
+<p>Do a demo of creating a repository, making some commits and moving through the commits.</p>
+</aside>
+</section>
+<section id="branches" class="slide level1">
+<h1>Branches</h1>
+<ul>
+<li>Create a <strong>branch</strong> in history</li>
+<li>Develop features <strong>in isolation</strong>
+<ul>
+<li>Changes <strong>don’t affect</strong> main branch</li>
+</ul></li>
+<li><strong>Merge</strong> branch when done</li>
+</ul>
+</section>
+<section id="branches-1" class="slide level1">
+<h1>Branches</h1>
+<p><img src="./img/git-merge-ff.webp" data-autoplay alt=""></p>
+<p><a href="https://rlogiacco.wordpress.com/2017/04/05/git-tricks/" class="uri">https://rlogiacco.wordpress.com/2017/04/05/git-tricks/</a></p>
+</section>
+<section id="demo-branching" class="slide level1">
+<h1><strong>DEMO</strong>: Branching</h1>
+<aside class="notes">
+<p>Demo of branching and merging</p>
+</aside>
+</section>
+<section id="gitlabgithub" class="slide level1">
+<h1>GitLab/GitHub</h1>
+<ul>
+<li>Online git <strong>hosting platforms</strong></li>
+<li>A copy called the <strong>remote repository</strong></li>
+<li>Everyone <strong>pulls</strong> updates from the remote</li>
+<li>Then <strong>pushes</strong> changes back</li>
+</ul>
+</section>
+<section id="university-gitlab" class="slide level1">
+<h1>University GitLab</h1>
+<p><a href="https://projects.cs.nott.ac.uk"><em>https://projects.cs.nott.ac.uk</em></a></p>
+<ul>
+<li>Private university <strong>GitLab instance</strong></li>
+<li>You can host projects here</li>
+<li>Make use of it!</li>
+</ul>
+<p><em>(Some courseworks will be released on here)</em></p>
+</section>
+<section id="extra-features" class="slide level1">
+<h1>Extra Features</h1>
+<ul>
+<li>Issue tracker</li>
+<li>Merge/Pull requests</li>
+<li>CI/CD</li>
+<li>Forking</li>
+</ul>
+</section>
+<section id="demo-gitlab" class="slide level1">
+<h1><strong>DEMO</strong>: GitLab</h1>
+<ul>
+<li>Creating a remote <strong>GitLab repository</strong></li>
+<li><strong>Pushing</strong> to it</li>
+</ul>
+</section>
+<section id="benefits-of-git" class="slide level1">
+<h1>Benefits of Git</h1>
+<div>
+<dl>
+<dt class="fragment">Safety</dt>
+<dd class="fragment"><strong>Complete history</strong> of changes, remote <strong>back-ups</strong>
+</dd>
+<dt class="fragment">Collaboration</dt>
+<dd class="fragment">Work on the <strong>same project</strong> from multiple places
+</dd>
+<dt class="fragment">Feature separation</dt>
+<dd class="fragment">Implement a feature, <strong>merge</strong> when it’s ready
+</dd>
+<dt class="fragment">Maintainability</dt>
+<dd class="fragment"><strong>Branches</strong>, <strong>issues</strong> and <strong>good commits</strong> keeps code organised and clean.
+</dd>
+</dl>
+</div>
+</section>
+<section id="questions" class="slide level1">
+<h1>Questions?</h1>
+</section>
+<section id="task" class="slide level1">
+<h1>Task</h1>
+<p>20 minutes</p>
+<p>If you haven’t: <strong>Welcome To The Machine</strong></p>
+<p>Otherwise, follow the <strong>worksheet</strong> handed out to you.</p>
+<p><em>Ask a <strong>mentor</strong> for help if you need it.</em></p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@4.1.3/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@4.1.3/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.1.3/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.1.3/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+      
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+		pdfSeparateFragments:false,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

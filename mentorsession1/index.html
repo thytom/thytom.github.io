@@ -1,343 +1,72 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <title>Mentor Training</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.3/dist/reset.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.3/dist/reveal.css">
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.3/dist/theme/black.css" id="theme">
-  
-  
-  
-  
-  
-  
+	<title>Mentor Session 1: Linux & Git</title>
+	<meta name="author" content="Archie Hilton">
+	<meta name="description" content="Resources for Mentor Session 1, University of Nottingham Computer Science.">
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-
-<section id="title-slide">
-  <h1 class="title">Mentor Training</h1>
-  <p class="subtitle">Session 1: Linux and Git</p>
-</section>
-
-<section id="today" class="slide level1">
-<h1>Today</h1>
-<ul>
-<li class="fragment">Session plan</li>
-<li class="fragment">Run-through slides</li>
-<li class="fragment">Sort out availability</li>
-<li class="fragment">Check out activity</li>
-<li class="fragment">Session on pointers (for those who want it :))</li>
-</ul>
-</section>
-<section id="whats-happening" class="slide level1">
-<h1>What’s Happening?</h1>
-<ul>
-<li><strong>3 sessions</strong>, 1-hour long each</li>
-<li><strong>7-8 mentors</strong> per session</li>
-<li><strong>Wednesday 13th October 1pm - 4pm</strong></li>
-</ul>
-</section>
-<section id="session-timeline" class="slide level1">
-<h1>Session Timeline</h1>
-<ul>
-<li>In one hour:
-<ul>
-<li>0m-10m : People start to arrive</li>
-<li>10m-35m : Archie gives talk (25 mins max)</li>
-<li>35m-55m : Hand out activity sheets</li>
-<li>55m-60m : People bugger off</li>
-</ul></li>
-</ul>
-</section>
-<section id="slide-run-through" class="slide level1">
-<h1>Slide Run-Through</h1>
-<p>Quick run through so you know the content and can ask questions. Also good practise for me I guess.</p>
-</section>
-<section id="feel-free-to-follow-along" class="slide level1">
-<h1>Feel Free to Follow Along</h1>
-<style type="text/css">
-.reveal .slides section {
-    //text-align: left;
-    margin:0 !important;
+	<style type="text/css">
+html {
+	background: #121212;
+	color: #e5e5e5;
+	font-size: 2vh;
 }
 
-//p, h1 {
-//  text-align: center;
-//}
-
-.reveal strong {
- color: #ffe66d;
+body {
+	min-width: 30ch;
+	max-width: 60vw;
+	margin: 1em auto;
+	padding: 1ch;
 }
 
-code {
-    color: #EB8258;
-    //color: #17B890;
-    background: #121212;
-    padding: 2px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px #050505;
+a {
+	text-decoration: none;
+	color: #42affa;
 }
 
-pre > code {
-    color: #ffffff;
-    padding: 10px !important;
+a:hover {
+	color: #8DCFFC;
 }
 
-.reveal h1 {
-    font-size: 1.5em;
-</style>
-<p>There will be several <strong>demonstrations</strong> using Linux.</p>
-<p>Feel free to <strong>open up your VirtualBox VM</strong> and follow along with me.</p>
-</section>
-<section id="topics" class="slide level1">
-<h1>Topics</h1>
-<ul>
-<li>Configuring <strong>VirtualBox</strong></li>
-<li>Working with <strong>Linux</strong></li>
-<li>Using <strong>Git</strong> for projects</li>
-</ul>
-<p><em>Slides will be available on Teams and Discord.</em></p>
-</section>
-<section id="linux-virtual-machine" class="slide level1">
-<h1>Linux Virtual Machine</h1>
-<ul>
-<li class="fragment">Installed <strong>VirtualBox</strong></li>
-<li class="fragment">Installed an <strong>Ubuntu VM</strong></li>
-<li class="fragment">Installed the <strong>Guest Utilities</strong></li>
-</ul>
-</section>
-<section id="installing-ubuntu-on-virtualbox" class="slide level1">
-<h1>Installing Ubuntu on VirtualBox</h1>
-<p><a href="https://linuxhint.com/install_ubuntu_virtualbox_2004" class="uri">https://linuxhint.com/install_ubuntu_virtualbox_2004</a></p>
-</section>
-<section id="virtualbox-configuration" class="slide level1">
-<h1>VirtualBox Configuration</h1>
-<p>You can <strong>change settings about your VM</strong>.</p>
-<div class="fragment">
-<p>It is recommended to set:</p>
-</div>
-<div class="fragment">
-<ul>
-<li>Memory <strong>4GB</strong> or more if you can</li>
-<li>Video memory <strong>128MB</strong></li>
-<li><strong>More than one CPU core</strong></li>
-</ul>
-</div>
-</section>
-<section id="example-fresh-ubuntu-vm" class="slide level1">
-<h1>Example: Fresh Ubuntu VM</h1>
-<ul>
-<li>I installed this VM earlier today</li>
-<li>Nothing done to it</li>
-<li>I will be setting it up during the talk</li>
-</ul>
-<aside class="notes">
-<p>Configure the virtual machine’s settings.</p>
-</aside>
-</section>
-<section id="virtualbox-guest-additions" class="slide level1">
-<h1>VirtualBox Guest Additions</h1>
-<ul>
-<li>VirtualBox VMs need <strong>drivers</strong> to work properly</li>
-<li>Allows for <strong>better performance</strong>, <strong>fullscreen</strong>, and <strong>shared copy/paste</strong></li>
-</ul>
-<p>There are several packages needed to make this work.</p>
-</section>
-<section id="the-package-manager" class="slide level1">
-<h1>The Package Manager</h1>
-<div>
-<ul>
-<li class="fragment">Linux programs are bundled into <strong>packages</strong></li>
-<li class="fragment"><strong>Install and update</strong> via the package manager</li>
-<li class="fragment">Updates <strong>all your programs</strong>*</li>
-<li class="fragment">Ubuntu uses <code>apt</code>, others exist</li>
-</ul>
-</div>
-</section>
-<section id="text-editors" class="slide level1">
-<h1>Text Editors</h1>
-<ul>
-<li>Ubuntu comes with <strong>GEdit</strong></li>
-<li>There are many others</li>
-<li>We recommend <strong>Visual Studio Code</strong> (<code>vscode</code>)</li>
-</ul>
-<p><code>sudo apt install vscode</code></p>
-</section>
-<section id="example-fresh-ubuntu-vm-walkthrough" class="slide level1">
-<h1>EXAMPLE: Fresh Ubuntu VM Walkthrough</h1>
-<ul>
-<li>I have just installed <strong>Ubuntu</strong></li>
-<li>Use <code>apt</code> to <strong>update</strong> the system and <strong>install</strong> some packages</li>
-<li>Also install <strong>VirtualBox Guest Utilities</strong></li>
-</ul>
-</section>
-<section id="package-list" class="slide level1">
-<h1>Package List</h1>
-<pre><code>build-essentials
-virtualbox-guest-dkms
-virtualbox-guest-x11
-virtualbox-guest-utils
-vscode</code></pre>
-</section>
-<section id="one" class="slide level1" data-auto-animate="true">
-<h1 data-auto-animate="true">What is Git?</h1>
-<p><img src="./img/git-logo.png" alt=""></p>
-</section>
-<section id="two" class="slide level1" data-auto-animate="true">
-<h1 data-auto-animate="true">What is Git?</h1>
-<div style="display:flex; align-items:center;">
-<img src="./img/git-logo.png" height=200 alt="">
-<ul style="padding-left:40px">
-<li class="fragment">
-Version Control System (<strong>VCS</strong>)
-</li>
-<li class="fragment">
-Every change is recorded
-</li>
-<li class="fragment">
-“Timeline” for your code
-</li>
-</ul>
-</div>
-</section>
-<section id="basics_one" class="slide level1" data-auto-animate="true">
-<h1 data-auto-animate="true">Basics of Git</h1>
-<ul>
-<li>Projects are stored in <strong>repositories</strong></li>
-<li><strong>Repositories</strong> contain all your code</li>
-<li>They also contain the <strong>history</strong> of your code</li>
-</ul>
-</section>
-<section id="basics_two" class="slide level1" data-auto-animate="true">
-<h1 data-auto-animate="true">Basics of Git</h1>
-<ul>
-<li>Changes are <strong>committed</strong> to the history</li>
-<li>History is <strong>permanent</strong>*</li>
-<li><strong>Time-travel</strong></li>
-</ul>
-</section>
-<section id="demo" class="slide level1">
-<h1>Demo</h1>
-<p>Making changes, <strong>committing</strong> them</p>
-<aside class="notes">
-<p>Do a demo of creating a repository, making some commits and moving through the commits.</p>
-</aside>
-</section>
-<section id="branches" class="slide level1">
-<h1>Branches</h1>
-<ul>
-<li>Create a <strong>branch</strong> in history</li>
-<li>Develop features <strong>in isolation</strong>
-<ul>
-<li>Changes <strong>don’t affect</strong> main branch</li>
-</ul></li>
-<li><strong>Merge</strong> branch when done</li>
-</ul>
-</section>
-<section id="demo-1" class="slide level1">
-<h1>Demo</h1>
-<p><strong>Branching</strong>, <strong>merging</strong></p>
-<aside class="notes">
-<p>Demo of branching and merging</p>
-</aside>
-</section>
-<section id="gitlabgithub" class="slide level1">
-<h1>GitLab/GitHub</h1>
-<ul>
-<li class="fragment">Online git <strong>hosting platforms</strong></li>
-<li class="fragment">A copy of your project, called the <strong>remote</strong></li>
-<li class="fragment">Everyone <strong>pulls</strong> updates from the remote</li>
-<li class="fragment">Then <strong>pushes</strong> changes back</li>
-</ul>
-</section>
-<section id="university-gitlab" class="slide level1">
-<h1>University GitLab</h1>
-<p><a href="https://projects.cs.nott.ac.uk"><em>https://projects.cs.nott.ac.uk</em></a></p>
-<ul>
-<li>Private university <strong>GitLab instance</strong></li>
-<li>You can host projects here</li>
-<li>Make use of it!</li>
-</ul>
-<p><em>(Some courseworks will be released on here)</em></p>
-</section>
-<section id="extra-features" class="slide level1">
-<h1>Extra Features</h1>
-<ul>
-<li>Issue tracker</li>
-<li>Merge/Pull requests</li>
-<li>CI/CD</li>
-<li>Forking</li>
-</ul>
-</section>
-<section id="demo-2" class="slide level1">
-<h1>Demo</h1>
-<ul>
-<li>Creating a remote <strong>GitLab repository</strong></li>
-<li><strong>Pushing</strong> to it</li>
-</ul>
-</section>
-<section id="benefits" class="slide level1">
-<h1>Benefits</h1>
-<ul>
-<li class="fragment">Safety</li>
-<li class="fragment">Ease of collaboration</li>
-<li class="fragment">Feature separation</li>
-<li class="fragment">Maintainability</li>
-</ul>
-</section>
-<section id="questions" class="slide level1">
-<h1>Questions?</h1>
-</section>
-<section id="task" class="slide level1">
-<h1>Task</h1>
-<p>20 minutes</p>
-<p>If you haven’t: <strong>Welcome To The Machine</strong></p>
-<p>Otherwise, follow the <strong>worksheet</strong> handed out to you.</p>
-<p><em>Ask a <strong>mentor</strong> for help if you need it.</em></p>
-</section>
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/reveal.js@4.1.3/dist/reveal.js"></script>
-
-  <!-- reveal.js plugins -->
-  <script src="https://unpkg.com/reveal.js@4.1.3/plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.1.3/plugin/search/search.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.1.3/plugin/zoom/zoom.js"></script>
-
-  <script>
-
-      // Full list of configuration options available at:
-      // https://revealjs.com/config/
-      Reveal.initialize({
-      
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
-
-        // reveal.js plugins
-        plugins: [
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
-        ]
-      });
-    </script>
-    </body>
+hr {
+	border: 2px solid #e5e5e5;
+}
+	</style>
+	<header>
+		<h1>Mentor Session 1: Linux & Git</h1>
+		<hr>
+	</header>
+	<main>
+		<section>
+			<h2>Resources</h2>
+			<ul>
+				<li>
+					<a href="slides.html">Slides</a>
+				</li>
+				<li>
+					<a href="slides.pdf">Slides - PDF Download</a>
+				</li>
+				<li>
+					<a href="activity.pdf">Activity Sheet</a>
+				</li>
+				
+			</ul>
+			
+		</section>
+		<section>
+			<h2>Useful Links:</h2>
+			<dl>
+				<dt>How to Install Ubuntu with VirtualBox</dt>
+				<dd>
+					<a href="https://linuxhint.com/install_ubuntu_virtualbox_2004">https://linuxhint.com/install_ubuntu_virtualbox_2004</a>
+				</dd>
+			</dl>
+		</section>
+	</main>
+	<footer>
+		<hr>
+		<p>Archie Hilton | Mentor Scheme 2021-2022<p>
+	</footer>
+</body>
 </html>
